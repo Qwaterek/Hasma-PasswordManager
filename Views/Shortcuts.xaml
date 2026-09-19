@@ -1,0 +1,43 @@
+﻿<Window x:Class="PasswordGenerator.Shortcuts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PasswordGenerator"
+        mc:Ignorable="d"
+        ResizeMode="CanResize"
+        MinHeight="420" MinWidth="700"
+        Title="Shortcuts" Height="460" Width="760">
+    <Grid Margin="10" Background="#99D6D6D6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Label x:Name="HeaderLabel" Grid.Row="0" Content="Keyboard Shortcuts" Margin="0,0,0,6" FontSize="20"/>
+
+        <!-- Content area with light background similar to AccountPanel layout -->
+        <Grid Grid.Row="1" Background="#99D6D6D6">
+            <Rectangle Fill="#FFD2D2D2" Stroke="#FFB1B1B1" RadiusX="3" RadiusY="3"/>
+
+            <DockPanel Margin="10">
+                <TextBlock x:Name="IntroText" DockPanel.Dock="Top" TextWrapping="Wrap" FontSize="13" Margin="0,0,0,8" />
+
+                <!-- Use a GridView for a simple two-column list (Shortcut / Description) -->
+                <ListView x:Name="ShortcutsList" BorderThickness="0">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn x:Name="ShortcutColumn" Header="Shortcut" Width="190" DisplayMemberBinding="{Binding Shortcut}" />
+                            <GridViewColumn x:Name="DescriptionColumn" Header="Description" Width="500" DisplayMemberBinding="{Binding Description}" />
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </DockPanel>
+        </Grid>
+
+        <!-- Footer -->
+        <Label x:Name="FooterLabel" Grid.Row="2" Content="Tip: You can change language in Help -> Language" FontSize="12" Opacity="0.7" Margin="0,6,0,0" />
+    </Grid>
+</Window>

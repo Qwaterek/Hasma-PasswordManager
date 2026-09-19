@@ -1,0 +1,21 @@
+﻿<Application x:Class="PasswordGenerator.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PasswordGenerator"
+             ShutdownMode="OnExplicitShutdown">
+    <Application.Resources>
+        <!-- Global RoutedUICommands so commands are available project-wide -->
+        <RoutedUICommand x:Key="OpenAccountsCmd" Text="Open Accounts" />
+        <RoutedUICommand x:Key="AddAccountCmd" Text="Add Account" />
+        <RoutedUICommand x:Key="FastPasswordCmd" Text="Fast Password" />
+        <RoutedUICommand x:Key="SaveConfigCmd" Text="Save Config" />
+        <RoutedUICommand x:Key="LoadConfigCmd" Text="Load Config" />
+        <RoutedUICommand x:Key="LoginAllCmd" Text="Login All" />
+        <RoutedUICommand x:Key="ShowShortcutsCmd" Text="Show Shortcuts" />
+
+        <!-- Ikona programu automatycznie na każdym oknie (bez wpisywania Icon= w każdym .xaml) -->
+        <Style TargetType="Window">
+            <Setter Property="Icon" Value="pack://application:,,,/AppIcon.ico" />
+        </Style>
+    </Application.Resources>
+</Application>

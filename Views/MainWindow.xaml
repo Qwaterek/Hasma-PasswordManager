@@ -1,0 +1,167 @@
+﻿<Window x:Class="PasswordGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PasswordGenerator"
+        xmlns:p="clr-namespace:PasswordGenerator"
+        mc:Ignorable="d"
+        Title="hasma - Password Manager" Height="500" Width="400"
+        ResizeMode="CanMinimize"
+        KeyDown="Window_KeyDown">
+
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource OpenAccountsCmd}" Executed="Cmd_OpenAccounts_Executed" CanExecute="Cmd_CanExecute" />
+        <CommandBinding Command="{StaticResource AddAccountCmd}" Executed="Cmd_AddAccount_Executed" CanExecute="Cmd_CanExecute" />
+        <CommandBinding Command="{StaticResource FastPasswordCmd}" Executed="Cmd_FastPassword_Executed" CanExecute="Cmd_CanExecute" />
+        <CommandBinding Command="{StaticResource SaveConfigCmd}" Executed="Cmd_SaveConfig_Executed" CanExecute="Cmd_CanExecute" />
+        <CommandBinding Command="{StaticResource LoadConfigCmd}" Executed="Cmd_LoadConfig_Executed" CanExecute="Cmd_CanExecute" />
+        <CommandBinding Command="{StaticResource LoginAllCmd}" Executed="Cmd_LoginAll_Executed" CanExecute="Cmd_CanExecute" />
+        <CommandBinding Command="{StaticResource ShowShortcutsCmd}" Executed="Cmd_ShowShortcuts_Executed" CanExecute="Cmd_CanExecute" />
+    </Window.CommandBindings>
+
+    <Window.InputBindings>
+        <KeyBinding Key="F3" Command="{StaticResource OpenAccountsCmd}" />
+        <KeyBinding Key="N" Modifiers="Ctrl" Command="{StaticResource AddAccountCmd}" />
+        <KeyBinding Key="F4" Command="{StaticResource FastPasswordCmd}" />
+        <KeyBinding Key="F5" Modifiers="Ctrl" Command="{StaticResource SaveConfigCmd}" />
+        <KeyBinding Key="F6" Modifiers="Ctrl" Command="{StaticResource LoadConfigCmd}" />
+        <KeyBinding Key="L" Modifiers="Ctrl" Command="{StaticResource LoginAllCmd}" />
+        <KeyBinding Key="F1" Command="{StaticResource ShowShortcutsCmd}" />
+    </Window.InputBindings>
+
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <!-- Menu Edycja -->
+            <MenuItem Header="{x:Static p:Resources.MenuEdit}">
+                    <MenuItem Header="{x:Static p:Resources.MenuAccounts}" Command="{StaticResource OpenAccountsCmd}" InputGestureText="F3"/>
+                <MenuItem Header="{x:Static p:Resources.MenuAddAccount}" Command="{StaticResource AddAccountCmd}" InputGestureText="Ctrl+N"/>
+                <MenuItem Header="{x:Static p:Resources.MenuFastPassword}" Command="{StaticResource FastPasswordCmd}" InputGestureText="F4"/>
+            </MenuItem>
+
+            <!-- Menu Narzędzia -->
+            <MenuItem Header="{x:Static p:Resources.MenuTools}">
+                <MenuItem Header="{x:Static p:Resources.MenuSaveConfig}" Command="{StaticResource SaveConfigCmd}" ToolTip="Exports all account data to a JSON configuration file" InputGestureText="Ctrl+F5"/>
+                <MenuItem Header="{x:Static p:Resources.MenuLoadConfig}" Command="{StaticResource LoadConfigCmd}" ToolTip="Imports account data from a file" InputGestureText="Ctrl+F6"/>
+                <MenuItem Header="{x:Static p:Resources.MenuLoginAll}" Command="{StaticResource LoginAllCmd}" ToolTip="Logs into all saved services" InputGestureText="Ctrl+L"/>
+                <Separator/>
+                <MenuItem Header="{x:Static p:Resources.MenuChangeMasterPassword}" Click="MenuItem_ChangeMasterPassword_Click"/>
+            </MenuItem>
+
+            <!-- Menu Pomoc -->
+            <MenuItem Header="{x:Static p:Resources.MenuHelp}">
+                <MenuItem Header="{x:Static p:Resources.MenuAbout}" Click="MenuItem_Click_OProgramie"/>
+                <MenuItem Header="{x:Static p:Resources.MenuShortcuts}" Command="{StaticResource ShowShortcutsCmd}" InputGestureText="F1"/>
+                <MenuItem Header="{x:Static p:Resources.MenuLanguage}">
+                    <MenuItem x:Name="LangEnglishMenuItem" Header="English" IsCheckable="True" Click="SetLanguage_English_Click"/>
+                    <MenuItem x:Name="LangPolishMenuItem" Header="Polski" IsCheckable="True" Click="SetLanguage_Polish_Click"/>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <Grid>
+            <Label Content="hasma" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="66" Width="208" FontSize="48" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Yu Gothic Light"/>
+
+            <!-- Kontener wyszukiwarki -->
+            <Grid Margin="10,98,10,0" Height="22" VerticalAlignment="Top">
+                <TextBox x:Name="SearchTextBox" 
+                         Padding="4,0,0,0" 
+                         VerticalContentAlignment="Center" 
+                         BorderBrush="#FFABADB3"/>
+
+                <TextBlock Text="{x:Static p:Resources.SearchPlaceholder}" 
+                           Foreground="Gray" 
+                           FontStyle="Italic" 
+                           FontSize="12" 
+                           VerticalAlignment="Center" 
+                           Margin="6,0,0,0" 
+                           IsHitTestVisible="False"
+                           ToolTip="Type URL, Username or Email">
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Text, ElementName=SearchTextBox}" Value="">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            </Grid>
+
+            <!-- Tabela DataGrid -->
+            <DataGrid x:Name="MainDataGrid" 
+                      d:ItemsSource="{d:SampleData ItemCount=5}" 
+                      Margin="10,130,10,10" 
+                      CanUserAddRows="False" 
+                      IsReadOnly="True"
+                      AutoGenerateColumns="False"
+                      CanUserResizeColumns="False"
+                      CanUserSortColumns="False"
+                      CanUserReorderColumns="False"
+                      SelectionUnit="FullRow"
+                      SelectionMode="Single"
+                      MouseDoubleClick="MainDataGrid_MouseDoubleClick" BorderBrush="#FFABADB3">
+                <DataGrid.Resources>
+                    <!-- Prevent the default blue selection background by overriding system brushes locally -->
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent"/>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Transparent"/>
+                </DataGrid.Resources>
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="Foreground" Value="Black"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
+                <DataGrid.CellStyle>
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="Foreground" Value="Black"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.CellStyle>
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header=" " Width="20">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Click="OpenUrl_Click" 
+                                        Background="Transparent" 
+                                        BorderThickness="0" 
+                                        Cursor="Hand"
+                                        ToolTip="Open in browser">
+                                    <Image Width="16" Height="16" 
+                                           Source="{Binding FaviconUrl}" 
+                                           HorizontalAlignment="Center" 
+                                           VerticalAlignment="Center"/>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTextColumn Header="{x:Static p:Resources.ColUrl}" Binding="{Binding Title}" Width="40"/>
+                    <DataGridTextColumn Header="{x:Static p:Resources.ColUser}" Binding="{Binding Username}" Width="140"/>
+                    <DataGridTextColumn Header="{x:Static p:Resources.ColEmail}" Binding="{Binding Email}" Width="*"/>
+                    <DataGridTemplateColumn Header="{x:Static p:Resources.ColPassword}" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <local:MaskedPasswordControl />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </DockPanel>
+</Window>

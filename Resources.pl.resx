@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppTitle" xml:space="preserve">
+    <value>Hasma - Password Manager</value>
+  </data>
+  <data name="MenuAbout" xml:space="preserve">
+    <value>O programie</value>
+  </data>
+  <data name="MenuAccounts" xml:space="preserve">
+    <value>Konta</value>
+  </data>
+  <data name="MenuAddAccount" xml:space="preserve">
+    <value>Dodaj konto</value>
+  </data>
+  <data name="MenuFastPassword" xml:space="preserve">
+    <value>Wygeneruj szybkie hasło</value>
+  </data>
+  <data name="MenuHelp" xml:space="preserve">
+    <value>Pomoc</value>
+  </data>
+  <data name="MenuLanguage" xml:space="preserve">
+    <value>Język / Language</value>
+  </data>
+  <data name="MenuLoadConfig" xml:space="preserve">
+    <value>Wczytaj konfigurację</value>
+  </data>
+  <data name="MenuLoginAll" xml:space="preserve">
+    <value>Zaloguj do wszystkich portali</value>
+  </data>
+  <data name="MenuSaveConfig" xml:space="preserve">
+    <value>Zapisz konfigurację</value>
+  </data>
+  <data name="MenuEdit" xml:space="preserve">
+    <value>Edytuj</value>
+  </data>
+  <data name="MenuTools" xml:space="preserve">
+    <value>Narzędzia </value>
+  </data>
+  <data name="MenuShortcuts" xml:space="preserve">
+    <value>Skróty klawiszowe</value>
+  </data>
+  <data name="SearchPlaceholder" xml:space="preserve">
+    <value>Szukaj...</value>
+  </data>
+  <data name="ColUrl" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="ColUser" xml:space="preserve">
+    <value>Nazwa Użytkownika</value>
+  </data>
+  <data name="ColEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="ColPassword" xml:space="preserve">
+    <value>Hasło</value>
+  </data>
+  <data name="MsgConfigWarnText" xml:space="preserve">
+    <value>UWAGA! Plik konfiguracyjny zawiera NIEZASZYFROWANY KLUCZ. Usuń go zaraz po imporcie!</value>
+  </data>
+  <data name="MsgConfigWarnTitle" xml:space="preserve">
+    <value>Ostrzeżenie o bezpieczeństwie</value>
+  </data>
+  <data name="PolishGenNote" xml:space="preserve">
+    <value>Generator polskich słów</value>
+  </data>
+  <data name="AboutTitle" xml:space="preserve">
+    <value>O programie</value>
+  </data>
+  <data name="AboutDescription" xml:space="preserve">
+    <value>Aplikacja "hasma" to menedżer haseł, który umożliwia bezpieczne przechowywanie i zarządzanie hasłami użytkownika. Program oferuje funkcje takie jak generowanie silnych haseł, organizowanie kont w kategorie oraz możliwość szybkiego logowania się na różnych portalach.</value>
+  </data>
+  <data name="AboutGitHubTooltip" xml:space="preserve">
+    <value>Otwórz profil GitHub</value>
+  </data>
+  <data name="AboutExtra" xml:space="preserve">
+    <value>Jest to mój pierwszy większy projekt w C#. Stworzenie tego programu zajęło mi ponad 30 godzin. Jeśli wiesz jak poprawić mój kod, śmiało zgłaszaj problemy na GitHubie.</value>
+  </data>
+  <data name="AboutFooter" xml:space="preserve">
+    <value>Wersja 1.0.0 | © 2026 Qwaterek</value>
+  </data>
+  <data name="CreateAccountTitle" xml:space="preserve">
+    <value>Dodaj nowe konto</value>
+  </data>
+  <data name="CreateUrlLabel" xml:space="preserve">
+    <value>URL:</value>
+  </data>
+  <data name="CreateUsernameLabel" xml:space="preserve">
+    <value>Nazwa użytkownika:</value>
+  </data>
+  <data name="CreateEmailLabel" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="CreatePasswordLabel" xml:space="preserve">
+    <value>Hasło:</value>
+  </data>
+  <data name="RefreshPasswordTooltip" xml:space="preserve">
+    <value>Wygeneruj nowe hasło</value>
+  </data>
+  <data name="GeneratePassword" xml:space="preserve">
+    <value>Wygeneruj hasło</value>
+  </data>
+  <data name="Weak" xml:space="preserve">
+    <value>Słabe</value>
+  </data>
+  <data name="WeakTooltip" xml:space="preserve">
+    <value>Słabe hasło zawiera tylko litery lub cyfry</value>
+  </data>
+  <data name="Medium" xml:space="preserve">
+    <value>Średnie</value>
+  </data>
+  <data name="MediumTooltip" xml:space="preserve">
+    <value>Średnie hasło zawiera mieszankę liter i cyfr</value>
+  </data>
+  <data name="Strong" xml:space="preserve">
+    <value>Silne</value>
+  </data>
+  <data name="StrongTooltip" xml:space="preserve">
+    <value>Silne hasło zawiera mieszankę liter, cyfr i znaków specjalnych</value>
+  </data>
+  <data name="CreateFastPassword" xml:space="preserve">
+    <value>Użyj generatora szybkich haseł</value>
+  </data>
+  <data name="CreateFastPasswordTooltip" xml:space="preserve">
+    <value>Użyj generatora szybkich haseł, który jest słabszy ale łatwiejszy do zapamiętania</value>
+  </data>
+  <data name="LastModifiedText" xml:space="preserve">
+    <value>Hasło było ostatnio zmieniane w dniu:</value>
+  </data>
+  <data name="LastModifiedWithDate" xml:space="preserve">
+    <value>Hasło było ostatnio zmieniane w dniu: {0}</value>
+  </data>
+  <data name="EditAccountTitle" xml:space="preserve">
+    <value>Edytuj konto</value>
+  </data>
+  <data name="ValidationRequiredFields" xml:space="preserve">
+    <value>Wypełnij co najmniej nazwę użytkownika i hasło.</value>
+  </data>
+  <data name="DeleteConfirmTitle" xml:space="preserve">
+    <value>Potwierdzenie usunięcia</value>
+  </data>
+  <data name="DeleteConfirmMessage" xml:space="preserve">
+    <value>Czy na pewno chcesz usunąć to konto?</value>
+  </data>
+  <data name="CopiedMessage" xml:space="preserve">
+    <value>Skopiowano {0}</value>
+  </data>
+  <data name="Shortcut_RevealPassword_Shortcut" xml:space="preserve">
+    <value>Przytrzymaj PPM (hasło)</value>
+  </data>
+  <data name="Shortcut_RevealPassword_Desc" xml:space="preserve">
+    <value>odkrycie hasła</value>
+  </data>
+  <data name="DeleteAccount" xml:space="preserve">
+    <value>Usuń konto</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Anuluj</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Zapisz</value>
+  </data>
+  <data name="AccountPanel_AddButton" xml:space="preserve">
+    <value>Dodaj konto</value>
+  </data>
+  <data name="AccountPanel_AddButtonTooltip" xml:space="preserve">
+    <value>Dodaj nowe konto do bazy danych</value>
+  </data>
+  <data name="AccountPanel_UrlHeader" xml:space="preserve">
+    <value>URL / Serwis</value>
+  </data>
+  <data name="AccountPanel_UserHeader" xml:space="preserve">
+    <value>Użytkownik</value>
+  </data>
+  <data name="AccountPanel_EmailHeader" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="AccountPanel_PasswordHeader" xml:space="preserve">
+    <value>Hasło</value>
+  </data>
+  <data name="LangEnglish" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="LangPolish" xml:space="preserve">
+    <value>Polski</value>
+  </data>
+  <data name="Shortcuts_Header" xml:space="preserve">
+    <value>Skróty klawiszowe</value>
+  </data>
+  <data name="Shortcuts_Intro" xml:space="preserve">
+    <value>Poniżej znajdują się przydatne skróty klawiszowe dostępne w aplikacji.</value>
+  </data>
+  <data name="Shortcuts_ColShortcut" xml:space="preserve">
+    <value>Skrót</value>
+  </data>
+  <data name="Shortcuts_ColDescription" xml:space="preserve">
+    <value>Opis</value>
+  </data>
+  <data name="Shortcuts_Footer" xml:space="preserve">
+    <value>Wskazówka: Możesz zmienić język w Pomoc -&gt; Język</value>
+  </data>
+  <data name="Shortcut_AddAccount_Shortcut" xml:space="preserve">
+    <value>Ctrl+N</value>
+  </data>
+  <data name="Shortcut_AddAccount_Desc" xml:space="preserve">
+    <value>Dodaj nowe konto (otwiera okno dodawania konta)</value>
+  </data>
+  <data name="Shortcut_FocusSearch_Shortcut" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="Shortcut_FocusSearch_Desc" xml:space="preserve">
+    <value>Ustaw fokus w polu wyszukiwania i zaznacz tekst</value>
+  </data>
+  <data name="Shortcut_OpenAccounts_Shortcut" xml:space="preserve">
+    <value>F3</value>
+  </data>
+  <data name="Shortcut_OpenAccounts_Desc" xml:space="preserve">
+    <value>Otwórz panel kont</value>
+  </data>
+  <data name="Shortcut_FastPassword_Shortcut" xml:space="preserve">
+    <value>F4</value>
+  </data>
+  <data name="Shortcut_FastPassword_Desc" xml:space="preserve">
+    <value>Otwórz generator szybkich haseł</value>
+  </data>
+  <data name="Shortcut_SaveConfig_Shortcut" xml:space="preserve">
+    <value>Ctrl+F5</value>
+  </data>
+  <data name="Shortcut_SaveConfig_Desc" xml:space="preserve">
+    <value>Zapisz konfigurację do pliku (eksportuje niezabezpieczony klucz)</value>
+  </data>
+  <data name="Shortcut_LoadConfig_Shortcut" xml:space="preserve">
+    <value>Ctrl+F6</value>
+  </data>
+  <data name="Shortcut_LoadConfig_Desc" xml:space="preserve">
+    <value>Wczytaj konfigurację z pliku</value>
+  </data>
+  <data name="Shortcut_LoginAll_Shortcut" xml:space="preserve">
+    <value>Ctrl+L</value>
+  </data>
+  <data name="Shortcut_LoginAll_Desc" xml:space="preserve">
+    <value>Zaloguj do wszystkich zapisanych portali</value>
+  </data>
+  <data name="Shortcut_ShowShortcuts_Shortcut" xml:space="preserve">
+    <value>F1</value>
+  </data>
+  <data name="Shortcut_ShowShortcuts_Desc" xml:space="preserve">
+    <value>Pokaż listę skrótów klawiszowych</value>
+  </data>
+  <data name="MasterPwd_WindowTitle" xml:space="preserve">
+    <value>Hasło główne</value>
+  </data>
+  <data name="MasterPwd_NewHeader" xml:space="preserve">
+    <value>Ustaw hasło główne</value>
+  </data>
+  <data name="MasterPwd_NewSubHeader" xml:space="preserve">
+    <value>To hasło będzie chronić wszystkie zapisane konta i hasła. Zapamiętaj je dobrze - bez niego nie da się odzyskać zapisanych danych.</value>
+  </data>
+  <data name="MasterPwd_UnlockHeader" xml:space="preserve">
+    <value>Wprowadź hasło główne</value>
+  </data>
+  <data name="MasterPwd_UnlockSubHeader" xml:space="preserve">
+    <value>Podaj hasło główne, aby odblokować zapisane konta.</value>
+  </data>
+  <data name="MasterPwd_ChangeHeader" xml:space="preserve">
+    <value>Ustaw nowe hasło główne</value>
+  </data>
+  <data name="MasterPwd_ChangeSubHeader" xml:space="preserve">
+    <value>Wybierz nowe hasło główne. Zastąpi ono dotychczasowe.</value>
+  </data>
+  <data name="MasterPwd_Label" xml:space="preserve">
+    <value>Hasło główne:</value>
+  </data>
+  <data name="MasterPwd_ConfirmLabel" xml:space="preserve">
+    <value>Powtórz hasło główne:</value>
+  </data>
+  <data name="MasterPwd_CloseButton" xml:space="preserve">
+    <value>Zamknij program</value>
+  </data>
+  <data name="MasterPwd_Err_Empty" xml:space="preserve">
+    <value>Hasło nie może być puste.</value>
+  </data>
+  <data name="MasterPwd_Err_TooShort" xml:space="preserve">
+    <value>Hasło główne powinno mieć co najmniej 4 znaki.</value>
+  </data>
+  <data name="MasterPwd_Err_Mismatch" xml:space="preserve">
+    <value>Podane hasła się różnią.</value>
+  </data>
+  <data name="MasterPwd_Err_Wrong" xml:space="preserve">
+    <value>Nieprawidłowe hasło.</value>
+  </data>
+  <data name="PwdPrompt_Label" xml:space="preserve">
+    <value>Hasło:</value>
+  </data>
+  <data name="PwdPrompt_ConfirmLabel" xml:space="preserve">
+    <value>Powtórz hasło:</value>
+  </data>
+  <data name="PwdPrompt_OkButton" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="PwdPrompt_Err_Empty" xml:space="preserve">
+    <value>Hasło nie może być puste.</value>
+  </data>
+  <data name="PwdPrompt_Err_TooShort" xml:space="preserve">
+    <value>Hasło powinno mieć co najmniej 6 znaków.</value>
+  </data>
+  <data name="PwdPrompt_Err_Mismatch" xml:space="preserve">
+    <value>Podane hasła się różnią.</value>
+  </data>
+  <data name="ExportPwd_Header" xml:space="preserve">
+    <value>Hasło do pliku eksportu</value>
+  </data>
+  <data name="ExportPwd_SubHeader" xml:space="preserve">
+    <value>Ustaw hasło, którym zostanie zaszyfrowany eksportowany plik. Będzie ono potrzebne przy imporcie na innym urządzeniu - zapamiętaj je.</value>
+  </data>
+  <data name="ExportPwd_SuccessMsg" xml:space="preserve">
+    <value>Plik konfiguracyjny został zapisany i zaszyfrowany podanym hasłem.
+
+PAMIĘTAJ: bez tego hasła danych z pliku nie da się odzyskać - nigdzie nie jest ono zapisane.</value>
+  </data>
+  <data name="ImportPwd_Header" xml:space="preserve">
+    <value>Hasło do pliku importu</value>
+  </data>
+  <data name="ImportPwd_SubHeader" xml:space="preserve">
+    <value>Podaj hasło, którym zaszyfrowano ten plik konfiguracyjny.</value>
+  </data>
+  <data name="ImportPwd_FailMsg" xml:space="preserve">
+    <value>Nie udało się odczytać pliku - błędne hasło albo uszkodzony plik.</value>
+  </data>
+  <data name="ImportPwd_SuccessMsg" xml:space="preserve">
+    <value>Pomyślnie zaimportowano {0} kont i zapisano do pliku accounts.json!</value>
+  </data>
+  <data name="MenuChangeMasterPassword" xml:space="preserve">
+    <value>Zmień hasło główne</value>
+  </data>
+  <data name="ChangeMasterPwd_CurrentHeader" xml:space="preserve">
+    <value>Aktualne hasło główne</value>
+  </data>
+  <data name="ChangeMasterPwd_CurrentSubHeader" xml:space="preserve">
+    <value>Podaj aktualne hasło główne, aby kontynuować.</value>
+  </data>
+  <data name="ChangeMasterPwd_WrongCurrent" xml:space="preserve">
+    <value>Błędne aktualne hasło. Hasło główne nie zostało zmienione.</value>
+  </data>
+  <data name="ChangeMasterPwd_Success" xml:space="preserve">
+    <value>Hasło główne zostało pomyślnie zmienione.</value>
+  </data>
+  <data name="SuccessTitle" xml:space="preserve">
+    <value>Sukces</value>
+  </data>
+  <data name="WarningTitle" xml:space="preserve">
+    <value>Ostrzeżenie</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Błąd</value>
+  </data>
+  <data name="FastPwd_HeaderLabel" xml:space="preserve">
+    <value>Wygeneruj szybkie hasło</value>
+  </data>
+  <data name="FastPwd_CopyHint" xml:space="preserve">
+    <value>Kliknij dwa razy lewym przyciskiem myszy, aby skopiować</value>
+  </data>
+  <data name="FastPwd_LengthLabel" xml:space="preserve">
+    <value>Liczba liter:</value>
+  </data>
+  <data name="FastPwd_SaveTooltip" xml:space="preserve">
+    <value>Zapisz nowe konto z wygenerowanym hasłem</value>
+  </data>
+  <data name="Shortcut_CopyToClipboard_Shortcut" xml:space="preserve">
+    <value>Podwójne kliknięcie LPM</value>
+  </data>
+  <data name="Shortcut_CopyToClipboard_Desc" xml:space="preserve">
+    <value>kopiuj do schowka (e-mail, nazwa użytkownika, hasło) </value>
+  </data>
+</root>
