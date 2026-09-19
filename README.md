@@ -1,3 +1,9 @@
+<img width="414" height="520" alt="obraz" src="https://github.com/user-attachments/assets/4cbfc99f-b9ca-4900-91e5-018760facec4" />
+
+
+
+
+
 EN----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Hasma, a minimalist password manager with a password generator and auto-login, written in C#.
 
