@@ -2,9 +2,6 @@
 
 
 
-
-
-EN----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Hasma, a minimalist password manager with a password generator and auto-login, written in C#.
 
 The program is available in two languages: Polish and English (PL/EN).
@@ -81,7 +78,8 @@ industry practice, but treat it as “reasonable data protection on
 disk” rather than a fully certified enterprise-class solution.
 
 I USED AI (Claude, GitHub Copilot) TO CREATE THIS PROGRAM (& I used Deepl to translate that text)
-PL----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PL----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Hasma, minimalistyczny menedżer haseł z generatorem haseł i auto-logowaniem, napisanym w c#.
 
 Program dostępny jest w 2 językach: polskim i angielskim(PL/EN).
